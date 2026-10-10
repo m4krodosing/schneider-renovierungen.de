@@ -601,6 +601,7 @@ p {
 
 .visual-performance-image {
     height: 400px;
+    background: var(--color-white);
 }
 
 .visual-performance-image img,
@@ -821,16 +822,16 @@ p {
     pointer-events: none;
 }
 
-.portfolio-item:hover .portfolio-caption {
-    opacity: 1;
-    transform: translateY(0);
+@media (hover: hover) {
+    .portfolio-item:hover .portfolio-caption {   /* desktop: on hover */
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-@media (hover: none) {
-    .portfolio-caption {                     /* touch devices: no hover, always visible */
-        opacity: 1;
-        transform: none;
-    }
+.portfolio-item.is-active .portfolio-caption {   /* touch: on tap (toggled in main.js) */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .portfolio-item.is-entering {                /* re-played by the filter in main.js */
