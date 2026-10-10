@@ -107,6 +107,16 @@
         });
     }
 
+    /* Touch: Tippen zeigt/versteckt die Bildunterschrift */
+    portfolioItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (window.matchMedia('(hover: hover)').matches) return;
+            const willShow = !item.classList.contains('is-active');
+            portfolioItems.forEach(other => other.classList.remove('is-active'));
+            item.classList.toggle('is-active', willShow);
+        });
+    });
+
     /* ---- 4. FAQ (Akkordeon) --------------------------------------------- */
 
     const faq = $('.faq-section');
