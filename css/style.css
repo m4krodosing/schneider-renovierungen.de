@@ -615,7 +615,7 @@ p {
 }
 
 .about-image video {
-    object-position: 50% 45%;     /* portrait video: keep hand + sprayer in frame */
+    object-position: 50% 40%;     /* portrait video: keep hand + sprayer in frame */
 }
 
 .visual-performance-content > p {
