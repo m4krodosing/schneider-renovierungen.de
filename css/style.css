@@ -606,10 +606,16 @@ p {
 
 .visual-performance-image img,
 .about-image img,
-.portfolio-item img {
+.about-image video,
+.portfolio-item img,
+.portfolio-item video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.about-image video {
+    object-position: 50% 45%;     /* portrait video: keep hand + sprayer in frame */
 }
 
 .visual-performance-content > p {
@@ -788,7 +794,8 @@ p {
     pointer-events: none;
 }
 
-.portfolio-item img {
+.portfolio-item img,
+.portfolio-item video {
     transition: transform 0.3s ease;
 }
 
@@ -800,7 +807,8 @@ p {
     opacity: 1;
 }
 
-.portfolio-item:hover img {
+.portfolio-item:hover img,
+.portfolio-item:hover video {
     transform: scale(1.05);
 }
 
