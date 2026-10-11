@@ -2000,10 +2000,15 @@ p {
         font-size: var(--font-size-base);
     }
 
-    /* Content blocks */
-    .visual-performance-image,
-    .about-image {
+        /* Content blocks */
+    .visual-performance-image {
         height: 250px;
+    }
+
+    .about-image {
+        height: auto;
+        max-height: none;
+        aspect-ratio: 4 / 5;
     }
 
     .process-step-number {
